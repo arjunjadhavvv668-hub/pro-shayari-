@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultra Pro Shayari & Wishes Hub</title>
+<meta name="description" content="200+ Shayari, Birthday Wishes, Status, Poems & Morning Wishes with emojis.">
+<style>
+body{
+ margin:0;
+ font-family:Segoe UI,Arial;
+ background:linear-gradient(135deg,#e6d9ff,#cbb4f5);
+}
+header{
+ background:#3c096c;
+ color:white;
+ padding:40px;
+ text-align:center;
+}
+section{padding:40px}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+}
+.card{
+ background:#f4ecff;
+ padding:20px;
+ border-radius:14px;
+ box-shadow:0 8px 18px rgba(0,0,0,.1);
+}
+button{
+ background:#7b2cbf;
+ color:white;
+ border:none;
+ padding:8px 12px;
+ border-radius:6px;
+ cursor:pointer;
+}
+footer{
+ background:#240046;
+ color:#eee;
+ text-align:center;
+ padding:15px;
+}
+.ads{
+ height:220px;
+ background:#ddd;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ font-weight:bold;
+ border-radius:12px;
+ margin:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Ultra Pro Shayari & Wishes 🌸✨</h1>
+<p>Shayari • Birthday • Status • Poems • Morning 💖🔥</p>
+</header>
+
+<section>
+<h2>❤️ Shayari (200)</h2>
+<div class="grid" id="shayari"></div>
+</section>
+
+<section>
+<h2>🎂 Birthday Wishes (200)</h2>
+<div class="grid" id="birthday"></div>
+</section>
+
+<section>
+<h2>💬 Status (200)</h2>
+<div class="grid" id="status"></div>
+</section>
+
+<section>
+<h2>📜 Poems (200)</h2>
+<div class="grid" id="poems"></div>
+</section>
+
+<section>
+<h2>🌅 Morning Wishes (200)</h2>
+<div class="grid" id="morning"></div>
+</section>
+
+<div class="ads">⬆️ AD SPACE (Future Use)</div>
+
+<footer>
+Made by Arjun Jadhav 💖🔥🌟✨
+</footer>
+
+<script>
+function fill(id,text){
+ const box=document.getElementById(id);
+ for(let i=1;i<=200;i++){
+  const d=document.createElement('div');
+  d.className='card';
+  d.innerHTML=`<p>${text} ${i} 🌟💖✨</p><button onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText)">Copy</button>`;
+  box.appendChild(d);
+ }
+}
+fill('shayari','🌹 मोहब्बत दिल की सबसे खूबसूरत कहानी है');
+fill('birthday','🎉 जन्मदिन की ढेर सारी शुभकामनाएं');
+fill('status','🔥 खुद पर भरोसा रखो, जीत तुम्हारी होगी');
+fill('poems','📜 शब्दों में छुपी भावनाओं की कविता');
+fill('morning','🌅 सुप्रभात! आज का दिन शुभ हो');
+</script>
+
+</body>
+</html>
